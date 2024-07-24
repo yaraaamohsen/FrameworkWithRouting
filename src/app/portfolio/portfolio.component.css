@@ -1,0 +1,14 @@
+.layer {
+    background-color: rgba(26, 188, 156, 0.9);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.item button:hover .layer {
+    opacity: 1;
+}
+
+#layerContainer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+}

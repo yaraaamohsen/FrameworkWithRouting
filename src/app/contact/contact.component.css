@@ -1,0 +1,20 @@
+.form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.form-control:focus {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: var(--bs-border-bg);
+    border-color: var(--bs-border-color);
+    box-shadow: 0 0 0 0;
+}
+
+.form-control:focus ~ label {
+    color: #1ABC9C;
+    font-size: larger;
+}

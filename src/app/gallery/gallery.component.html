@@ -1,0 +1,31 @@
+<div class="gallery w-100 pt-5 mt-5" id="gallery">
+    <div class="container text-center py-5">
+      <h2 class="py-2 fs-1 fw-bolder">GALLERY COMPONENT</h2>
+      <div class="art d-flex justify-content-center align-items-center">
+        <div class="line"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="line"></div>
+      </div>
+      <div class="row pt-3 px-5 g-3">
+
+        @for (item of mealList; track $index) {
+          <div class="col-md-4 shadow-sm">
+            <div>
+              <img class="img-fluid w-100" [src]="item.mealImg" alt="">
+              <h4>{{item.mealName}}</h4>
+              <p class="text-start"><span class="fw-bolder">ID: </span>{{item.mealId}}</p>
+            </div>
+          </div>
+        }
+        
+      </div>
+    </div>
+    <h2 class="text-center fs-1 bg-primary-subtle text-primary-emphasis py-2 mb-5">RECOMMENDED MEALS</h2>
+  </div>
+
+  @defer (on viewport()) {
+    <app-recommendation></app-recommendation>
+  }
+  @placeholder {
+    <span class="loader d-flex justify-content-center align-items-center"></span>
+  }
